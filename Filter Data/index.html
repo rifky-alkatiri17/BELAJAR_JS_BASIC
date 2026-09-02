@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+	<title>FILTER DATA</title>
+</head>
+<body>
+
+	<div class="list"></div>
+
+	<style>
+		*{
+			font-family: 'Tahoma', sans-serif;
+		}
+
+	  .search-box {
+	    width: 300px;
+	    position: relative;
+	  }
+
+	  .suggestions {
+	    position: absolute;
+	    top: 30px;
+	    width: 100%;
+	    border: 1px solid #ccc;
+	    border-top: none;
+	    background: white;
+	    max-height: 200px;
+	    overflow-y: auto;
+	    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+	    display: none;
+	    border-radius: 0 0 6px 6px;
+	    z-index: 999;
+	    padding: 5px;
+	  }	  
+
+	  .suggestions li {
+	  	/*background-color: lightblue;*/
+	    padding: 2px;
+	    cursor: pointer;
+	    list-style: none;
+	  }
+
+	  .suggestions li:hover {
+	    background: #f2f2f2;
+	  }
+	</style>
+	<div class="container mt-2">
+		<div class="search-box">
+		  <input type="text" id="search" placeholder="Cari..." autocomplete="off" autofocus />
+		  <ul id="suggest-box" class="suggestions"></ul>
+		</div>
+	</div>
+
+<script src="app.js"></script>
+</body>
+</html>

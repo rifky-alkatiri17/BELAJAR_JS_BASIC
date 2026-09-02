@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>TES EVENT</title>
+</head>
+<body>
+	<button type="button" class="hit-button" >PLEASE HIT THIS BUTTON</button>
+	<script>
+		const btn = document.querySelector('.hit-button');
+		let running = false;
+
+		btn.addEventListener('pointerdown', () => {
+		  running = true;
+		  run();
+		});
+
+		btn.addEventListener('pointerup', () => {
+		  running = false;
+		});
+
+		function run() {
+		  if (!running) return;
+		  console.log('tes');
+		  // requestAnimationFrame(run);
+		}
+	</script>
+</body>
+</html>
